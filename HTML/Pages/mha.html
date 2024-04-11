@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="../wiki.css" media="all" rel="stylesheet" type="text/css" />
+        <title>My Hero Academia</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="barre">
+                <ul>
+                    <a href="../instagram_accueil.html"><img src="../instagram.png" alt="Instagram" width="50" height="50"></a>
+                    <a href="../facebook_accueil.html"><img src="../facebook.png" alt="Facebook" width="50" height="50"></a>
+                    <a href="../twitter_accueil.html"><img src="../twitter.png" alt="Twitter" width="50" height="50"></a>
+                    <a href="../soutiens_nous.html" class="active"><p>Soutiens-nous !</p></a>
+                </ul>
+            </div>
+            <div class="logo">
+                <a href="../page_accueil_fr.html"><img src="../logo_pop_chann.png" alt="Pop Chann" width="120" height="120"></a>
+                <p class="titre_principal">Pop Chann'</p>
+                <p class="slogan">Le goût de l'animé</p>
+            </div>
+            <div class="searchbar">
+                <div class="search-detail">
+                  <a href="" target="_blank" hidden></a>
+                  <form>
+                        <input type="text" id="search-query" placeholder="Rechercher un animé...">
+                  </form>
+                </div>
+          
+            </div>
+            <script src="liens.js"></script>
+        </div>
+
+        <div class="barre_de_titre">
+            <h1 class="h1">My Hero Academia (MHA)</h1>
+        </div>
+
+        
+
+        <div class="container1">
+            <div class="square">
+                <img src="../Covers/top10/mha.jpg" alt="image">
+                <div class="square2"></div>
+                <div class="square3">
+                    <p class="notation">Note des viewers</p>
+                    <img src="../Etoiles/etoiles5.png" alt="Etoiles">
+                </div>
+            </div>
+            <div class="square5">
+                <body>
+                    <h2>General Description:</h2>
+                    <h3>Japanese name:</h3>
+                    <div id="JA"></div>
+                    <script>
+                    function request_normale() {
+                        fetch('https://cdn.animenewsnetwork.com/encyclopedia/api.xml?title=17786')
+                          .then(response => response.text())
+                          .then(str => new window.DOMParser().parseFromString(str,"text/xml"))
+                          .then(xml => {
+                            const items = xml.querySelectorAll("info[gid='3329657912']")
+                            items.forEach(i => {
+                                const p = document.createElement("p");
+                                p.innerHTML = i.textContent;
+                                p.classList.add("new-font");
+                                document.getElementById("JA").appendChild(p);
+
+                            })
+                        })
+                    }
+                    request_normale();
+                    </script>
+                    <h3>Genres:</h3>  
+                    <div id="Genres"></div>
+                    <script>
+                    function genres() {
+                        fetch('https://cdn.animenewsnetwork.com/encyclopedia/api.xml?title=17786')
+                          .then(response => response.text())
+                          .then(str => new window.DOMParser().parseFromString(str,"text/xml"))
+                          .then(xml => {
+                            const items = xml.querySelectorAll("info[type='Genres']")
+                            items.forEach(i => {
+                                const p = document.createElement("p");
+                                p.innerHTML = i.textContent;
+                                p.classList.add("new-font");
+                                document.getElementById("Genres").appendChild(p)    ;
+                            })
+                        })
+                    }
+                    genres();
+                  </script>
+                    <h3>Themes:</h3>
+                    <div id="Theme"></div>
+                    <script>
+                    function request_normale1() {
+                        fetch('https://cdn.animenewsnetwork.com/encyclopedia/api.xml?title=17786')
+                          .then(response => response.text())
+                          .then(str => new window.DOMParser().parseFromString(str,"text/xml"))
+                          .then(xml => {
+                            const items = xml.querySelectorAll("info[type='Themes']")
+                            items.forEach(i => {
+                                const p = document.createElement("p");
+                                p.innerHTML = i.textContent;
+                                p.classList.add("new-font");
+                                document.getElementById("Theme").appendChild(p);
+                            })
+                        })
+                    }
+                    request_normale1();
+                    </script>
+                    <h3 class="right">Episodes:</h3>
+                    <div id="myDev" class="right"></div>
+                    <script>
+                    function request_normale1() {
+                        fetch('https://cdn.animenewsnetwork.com/encyclopedia/api.xml?title=17786')
+                          .then(response => response.text())
+                          .then(str => new window.DOMParser().parseFromString(str,"text/xml"))
+                          .then(xml => {
+                            const items = xml.querySelectorAll("info[type='Number of episodes']")
+                            items.forEach(i => {
+                                const p = document.createElement("p");
+                                p.innerHTML = i.textContent;
+                                p.classList.add("new-font");
+                                document.getElementById("myDev").appendChild(p);
+                            })
+                        })
+                    }
+                    request_normale1();
+                  </script>
+                    <h3 class="right">Running time:</h3>
+                    <div id="Running time" class="right"></div>
+                    <script>
+                    function request_normale1() {
+                        fetch('https://cdn.animenewsnetwork.com/encyclopedia/api.xml?title=17786')
+                          .then(response => response.text())
+                          .then(str => new window.DOMParser().parseFromString(str,"text/xml"))
+                          .then(xml => {
+                            const items = xml.querySelectorAll("info[type='Running time']")
+                            items.forEach(i => {
+                                const p = document.createElement("p");
+                                p.innerHTML = i.textContent;
+                                p.classList.add("new-font");
+                                document.getElementById("Running time").appendChild(p);
+                            })
+                        })
+                    }
+                    request_normale1();
+                    </script>
+                    <h3 class="right">Autor:</h3>
+                    <div id="creator" class="right"></div>
+                    <script>
+                    function request_normale2() {
+                        fetch('https://cdn.animenewsnetwork.com/encyclopedia/api.xml?title=17786')
+                          .then(response => response.text())
+                          .then(str => new window.DOMParser().parseFromString(str,"text/xml"))
+                          .then(xml => {
+                            const items = xml.querySelectorAll('person[id="101020"]')
+                            items.forEach(i => {
+                                const p = document.createElement("p"); 
+                                p.innerHTML = i.textContent;
+                                p.classList.add("new-font");
+                                document.getElementById("creator").appendChild(p);
+                            })
+                        })
+                    }
+                    request_normale2();
+                  </script>
+                    <h2 class="up">Plot summary:</h2>
+                    <div id="myDiv" class="up"></div>
+                    <script>
+                    function request_normale1() {
+                        fetch('https://cdn.animenewsnetwork.com/encyclopedia/api.xml?title=17786')
+                          .then(response => response.text())
+                          .then(str => new window.DOMParser().parseFromString(str,"text/xml"))
+                          .then(xml => {
+                            const items = xml.querySelectorAll("info[type='Plot Summary']")
+                            items.forEach(i => {
+                                const p = document.createElement("p");
+                                p.innerHTML = i.textContent;
+                                p.classList.add("new-font");
+                                document.getElementById("myDiv").appendChild(p);
+                            })
+                        })
+                    }
+                    request_normale1();
+                  </script>
+                </body>
+            </div>
+        </div>
+    </body>
+</html>

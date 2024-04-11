@@ -1,0 +1,135 @@
+@import url('https://fonts.cdnfonts.com/css/berlin-sans-fb-demi');
+@import url('https://fonts.cdnfonts.com/css/segoe-ui-4');
+
+body {
+    background-color: rgb(42, 42, 42);
+    font-family: 'Segoe UI';
+}
+
+.container {
+    position: relative;
+    margin: auto;
+    min-height: 150px;
+    background-color:rgb(38, 168, 250);
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.barre {
+    position: absolute;
+    right: 40px;
+    bottom: 35px;
+    align-items: center;
+    width: 300px;
+    height: 80px;
+    background-color: rgb(42, 42, 42);
+    border-radius: 20px;
+}
+
+.logo {
+    position: absolute;
+    display: flex; align-items: center;
+    bottom: 15px; left: 15px;
+}
+
+ul {
+    position: relative;
+    top: 15px; right: 175px;
+    width: 100%;
+    display: flex;
+    padding-left: 200px;
+    height: 100%; margin: 0;
+    list-style: none;
+}
+
+.active {
+    color:rgb(38, 168, 250);
+    left: 350px;
+    text-decoration: none;
+    display: flex;
+    position: absolute;
+}
+
+.active:hover {
+    color:rgb(255, 255, 255);
+    border-bottom: 4px solid rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.titre_principal{
+    font-family: 'Berlin Sans FB Demi', sans-serif;
+    color: black;
+    font-size: 40px;
+    font-weight: normal;
+    position: relative;
+    top:-15px;
+}
+.slogan{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 20px;
+    position: relative;
+    top:15px; left: -205px;
+
+}
+
+.ligne1 {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ligne2 {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ligne3 {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ligne4 {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.images {
+    width: 220px; height: 220px;
+}
+
+.images:hover{
+    transition: transform 3s;
+    transform:scale(1.20);
+}
+
+
+
+
+
+
+/*La suite du code est réservée à la barre de recherche*/
+
+
+.searchbar{
+    position:relative;
+    text-align: center;
+    width: 45%;
+    top: 40px;
+    margin-left: 25%;
+    cursor: pointer;
+}
+
+.search-detail input{
+    height: 55px;
+    width: 50%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0 60px 0 20px;
+    font-size: 18px;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+}
